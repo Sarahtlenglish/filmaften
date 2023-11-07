@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Filmaften.com</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Filmaften.com</h1>
+      <img class="popcorn" src="img/pop.png" alt="">
+    </div>
+  </header>
+
+  <h2>Hvad vil du se i aften?</h2>
+  <main>
+    <div class="search-options">
+      <div class="category-container">
+        <select id="category">
+          <option disabled selected>Vælg kategori</option>
+          <option value="movie">Film</option>
+          <option value="tv">Serier</option>
+        </select>
+      </div>
+
+      <div class="genre-container">
+        <select id="genre">
+          <option disabled selected>Vælg genre</option>
+          <option value="all">Alle</option>
+        </select>
+      </div>
+
+      <div class="minScore-container">
+        <select id="minScore">
+          <option disabled selected>Vælg minimums score</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+
+      <button id="findButton">Find</button>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div id="result" class="movie-results">
+      <!-- Resultater vil blive vist her -->
+    </div>
+    
+    <button id="backButton" style="display: none;">Tilbage</button>
+
+  </main>
+</body>
+
+<footer>
+  <p>&copy; 2023 Filmaften, by Sarah English - This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,478 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+header {
+  background-color: #2b2b2b;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #2b2b2b;
+}
+
+footer p {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+main {
+  flex-grow: 1; /* Lad main fylde resten af det tilgængelige plads */
+  min-height: 67vh;
+}
+
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-family: Generica, sans-serif;
+  color: #ffd200;
+  text-shadow: 2px 2px 7px #1c1c1c; /* Tilføj skygge */
+  letter-spacing: 0.7px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: -5px;
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: -1.4px;
+  word-spacing: -2px;
+}
+h3 {
+  color:  #fefbfb;
+  padding: 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.logo {
+  display: flex;  
+}
+
+.popcorn {
+  width: 32px;
+  padding-left: 10px;
+}
+
+p {
+  color:#fffbfb;
+  font-size: 15px;
+}
+
+main {
+  padding: 30px;
+}
+
+.search-options {
+  text-align: center;
+}
+
+.search-options select,
+.search-options input {
+  margin: 5px;
+  padding: 10px;
+}
+
+.search-options button {
+  background-color: #ffd200;
+  border: 1px solid #000000; /* Ramme omkring knappen */
+  padding: 10px 40px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.movie-results {
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+/* Ændret tekststørrelse og farve for stjerne */
+.star {
+  font-size: 16px;
+  color: #ffd200;
+}
+
+img {
+  max-width: 85%;
+  max-height: 85%;
+}
+
+/* Style for knapper */
+button {
+  background: linear-gradient(to bottom, #e3b41a, #ffd200); /* Gradient baggrundsfarve */
+  color: #000000; /* Tekstfarve */
+  border: 2px solid #ffffff; /* Ramme omkring knappen */
+  border-radius: 5px; /* Afrundede hjørner */
+  cursor: pointer;
+  transition: background-color 0.6s, border-color 0.6s; /* Ændring af farver ved hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tilføj skygge */
+}
+
+/* Når musen bevæger sig over knappen */
+button:hover {
+  background: linear-gradient(to bottom, #dcb020, #ffd200); /* Gradient baggrundsfarve ændres */
+  border: 2px solid #ffd200; /* Ramme farve ændres */
+}
+
+/* Placer tekst over knappen */
+button::after {
+  content: attr(data-text); /* Vis tekst fra data-attribut */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* Fjern knapstilen fra select og input felter */
+select, input {
+  appearance: none;
+  border: 1px solid #454444;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px; /* Ændre bredden efter behov */
+  background-color: #2b2b2b;
+  color: white;
+}
+
+/* Juster teksten inden i input og select felter */
+select option, input[type="text"] {
+  color: #ffffff;
+  background-color: #fff;
+}
+
+/* Centrerer tekster og felter på knapperne */
+.search-options {
+  text-align: center;
+}
+
+.category-container,
+.genre-container,
+.minScore-container {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+#minScore {
+  width: 160px;
+}
+
+.result-item:hover {
+  transform: scale(1.05);
+}
+
+
+.result-item h3 {
+  margin: 10px 0;
+  font-size: 18px; /* Ændret tekststørrelse for titlen */
+}
+
+.result-item p {
+  font-size: 14px; /* Ændret tekststørrelse for score og varighed */
+  margin: 5px 0;
+  color: #ffd200; /* Ændret tekstfarve til gul */
+}
+
+.result-item {
+  vertical-align: top;
+  text-align: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.9s; /* Tilføj en transform-overgangseffekt */
+  background-color: transparent; /* Gør baggrundsfarven gennemsigtig */
+  padding: 0;
+  margin: 12px;
+  display: inline-block;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  color: #fff; /* Tekstfarve ændret til hvid */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  border: none; /* Fjern kant omkring result-item */
+  position: relative; /* Gør position relativ for at placere indhold nederst */  
+  height: 400px;
+  width: 300px;
+  }
+
+
+
+.result-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Skalering af billedet */
+  display: block;
+  margin: 0 auto; /* Centrer billedet */
+  width: 100%; /* Billedet fylder hele bredden af result-item */
+  border-radius: 13px;
+}
+
+.result-item .info {
+  padding: 10px; /* Tilføj en lille polstring til titel og score */
+  background-color: rgba(0, 0, 0, 0.6); /* Gør baggrundsfarven gennemsigtig med en vis grad af mørkelse */
+  color: #fff; /* Tekstfarve ændret til hvid */
+  position: absolute; /* Placer info nederst */
+  bottom: 0;
+  left: 0;
+  right: 0; /* Fylder hele bredden af result-item */
+  box-sizing: border-box;
+  display: flex; /* Gør indholdet til en fleksibel container */
+  flex-direction: column; /* Læg indholdet i en kolonne */
+  width: 100%; /* Bredden er 100% af result-item */
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.result-item h3 {
+  margin: 0;
+  font-size: 18px; /* Ændret tekststørrelse for titlen */
+}
+
+.result-item p {
+  font-size: 14px; /* Ændret tekststørrelse for score */
+  margin: 0;
+  color: #ffd200; /* Ændret tekstfarve til gul */
+}
+
+/* Ændret tekststørrelse og farve for stjerne */
+.star {
+  font-size: 16px;
+  color: #ffd200;
+}
+
+/* style3.css */
+.movie-results {
+  display: flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.result-item {
+  width: calc(33.3333% - 20px);
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  margin: 10px;
+  background-color: transparent;
+  width: 300px;
+}
+
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.expanded {
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.result-item.expanded {
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+/* Styling for udvidede resultater */
+.result-item.expanded {
+  width: 100%;
+  transform: scale(1.5);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Baggrundsfarve med lav opacitet */
+}
+
+#overlay-image img {
+  width: 100%;
+  max-height: 70%;
+  object-fit: cover; /* Skalering af billedet */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Ændret bredden af overlay-indhold */
+  max-width: 600px;
+  background-color: #332e2e;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box; /* Tilføj kassemodel for at inkludere puder i bredden */
+  display: flex; /* Brug fleksibel layout */
+  flex-direction: column; /* Layout i en kolonne */
+  justify-content: center; /* Centrér indhold vertikalt */
+}
+
+.enlarged-result {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1); /* Gør baggrundsfarven gennemsigtig med en vis grad af mørkelse */
+  max-height: 500px;
+  max-width: 750px;
+  border-radius: 13px;
+}
+
+.enlarged-result img {
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.enlarged-result .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.enlarged-result .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enlarged-result .title {
+  flex: 1;
+}
+
+.enlarged-result .title h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.enlarged-result .score {
+  margin-left: 20px;
+}
+
+.enlarged-result .score p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.enlarged-result .star {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.enlarged-result .description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.enlarged-result .details {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.enlarged-result img {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.enlarged-result .info {
+  flex: 1;
+}
+
+.enlarged-result .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enlarged-result h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+
+.enlarged-result .overview {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.score {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.description {
+  max-width: 400px; /* Ændr dette til din ønskede maksimale bredde */
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.actors {
+  max-width: 400px; /* Ændr dette til din ønskede maksimale bredde */
+  max-height: 130px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  margin-bottom: 30px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.back-button {
+  position: absolute;
+  background-color: #ffd200;
+  border: 1px solid #000000; /* Ramme omkring knappen */
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+  bottom: 30px; /* Juster denne værdi for ønsket afstand fra bunden */
+  
+}
+
+button.back-button:hover {
+  transition: background-color 0.6s, border-color 0.6s; /* Ændring af farver ved hover */
+}
+
+
+/* Golden Buttons  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px rgba(139,66,8,1),
+              inset 0 -1px 1px 3px rgba(250,227,133,1);
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: rgb(120,50,5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all .2s ease-in-out; */
+
+  
